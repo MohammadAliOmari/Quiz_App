@@ -39,6 +39,7 @@ class _QuizHomeState extends State<QuizHome> {
     return Scaffold(
       backgroundColor: const Color(0xff081235),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xff081235),
         elevation: 0,
         centerTitle: true,
@@ -84,7 +85,7 @@ class _QuizHomeState extends State<QuizHome> {
             isLastQuestion
                 ? Button(
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(
+                      Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) => ResulltPage(score: score),
                         ),

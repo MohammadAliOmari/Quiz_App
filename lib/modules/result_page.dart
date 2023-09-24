@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/modules/home_page.dart';
 
 class ResulltPage extends StatelessWidget {
   final int score;
@@ -50,6 +51,27 @@ class ResulltPage extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          Container(
+            height: 50,
+            width: 200,
+            color: const Color.fromARGB(255, 3, 16, 34),
+            child: MaterialButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const QuizHome(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Try Agian',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           )
         ],
       ),
